@@ -1,7 +1,7 @@
 venv/
-
 training/
 runs/
 models/
 input_video/*
 *.pt
+output_videos/*.mp4

@@ -4,52 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Training Video Processing</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Google Font for Stylish Text */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;600&display=swap');
+
+        /* Body Styling */
         body {
-            background: url('https://example.com/soccer-pitch.jpg') no-repeat center center fixed;
+            background: url('/static/assets/bg1.png') no-repeat center center fixed;
             background-size: cover;
-            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        /* Container Styling */
         .container {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            max-width: 500px;
+            text-align: center;
         }
+
+        /* Title Styling */
         h1 {
-            color: #28a745; /* Green theme */
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #32cd32; /* A vibrant lime green */
+            margin-bottom: 15px;
         }
+
+        /* Button Styling */
         .btn-primary {
-            background-color: #28a745;
-            border-color: #28a745;
+            background-color: #32cd32; /* Vibrant lime green */
+            border-color: #32cd32;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 25px;
+            margin-top: 20px; /* Adds space above the button */
+            transition: all 0.3s ease-in-out;
         }
+
         .btn-primary:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
+            background-color: #28a745; /* Slightly darker green */
+            border-color: #28a745;
+            transform: translateY(-2px);
         }
+        /* Label and Small Text */
         label {
             font-weight: bold;
-            color: #333;
+            color: #ddd;
+        }
+        small {
+            color: #aaa;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 20px;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #32cd32;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5 text-center">Soccer Training Video Processing</h1>
-        <p class="lead text-center">Upload a soccer training video to process it with our advanced model.</p>
+        <h1>Soccer Video Analysis</h1>
+        <p class="lead">Upload your training video and let our AI analyze it for insights and performance metrics.</p>
         <form action="/process_video" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="videoFile">Upload Video:</label>
-                <input type="file" class="form-control-file" id="videoFile" name="video" required>
+            <div class="mb-4">
+                <label for="videoFile" class="form-label">Upload Video File:</label>
+                <input type="file" class="form-control" id="videoFile" name="video" accept="video/*" required>
+                <small>Supported formats: MP4</small>
             </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Upload and Process</button>
-            </div>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-upload"></i> Upload & Process
+            </button>
         </form>
+        <footer>
+            <p>&copy; 2025 GoalLens Inc.</p>
+        </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
