@@ -4,4 +4,4 @@ runs/
 models/
 input_video/*
 *.pt
-output_videos/*.mp4
+output_videos/*
